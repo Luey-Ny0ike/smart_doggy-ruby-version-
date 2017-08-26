@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @trick.title %>
+</p>
+
+<p>
+  <strong>Step1:</strong>
+  <%= @trick.step1 %>
+</p>
+
+<p>
+  <strong>Step2:</strong>
+  <%= @trick.step2 %>
+</p>
+
+<p>
+  <strong>Step3:</strong>
+  <%= @trick.step3 %>
+</p>
+
+<p>
+  <strong>Step4:</strong>
+  <%= @trick.step4 %>
+</p>
+
+<p>
+  <strong>Extratips:</strong>
+  <%= @trick.extratips %>
+</p>
+
+<%= link_to 'Edit', edit_trick_path(@trick) %> |
+<%= link_to 'Back', tricks_path %>

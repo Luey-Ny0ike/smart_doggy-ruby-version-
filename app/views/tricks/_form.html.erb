@@ -1,0 +1,47 @@
+<%= form_with(model: trick, local: true) do |form| %>
+  <% if trick.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trick.errors.count, "error") %> prohibited this trick from being saved:</h2>
+
+      <ul>
+      <% trick.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :trick_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :step1 %>
+    <%= form.text_field :step1, id: :trick_step1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :step2 %>
+    <%= form.text_field :step2, id: :trick_step2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :step3 %>
+    <%= form.text_field :step3, id: :trick_step3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :step4 %>
+    <%= form.text_field :step4, id: :trick_step4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :extratips %>
+    <%= form.text_field :extratips, id: :trick_extratips %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
