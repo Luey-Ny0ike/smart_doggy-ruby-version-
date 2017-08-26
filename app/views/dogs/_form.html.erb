@@ -1,0 +1,67 @@
+<%= form_with(model: dog, local: true) do |form| %>
+  <% if dog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dog.errors.count, "error") %> prohibited this dog from being saved:</h2>
+
+      <ul>
+      <% dog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :dog_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.text_field :age, id: :dog_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :breed %>
+    <%= form.text_field :breed, id: :dog_breed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, id: :dog_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color, id: :dog_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nickname %>
+    <%= form.text_field :nickname, id: :dog_nickname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :dog_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :dog_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recomendation %>
+    <%= form.text_field :recomendation, id: :dog_recomendation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :dog_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
