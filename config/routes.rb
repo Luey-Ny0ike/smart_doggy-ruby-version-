@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :testimonials
+  resources :testimonials do
+    resources :comments
+  end
   resources :tricks
   resources :puppies
   resources :dogs
