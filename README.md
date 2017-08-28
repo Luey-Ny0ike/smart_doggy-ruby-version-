@@ -1,5 +1,8 @@
 # README
 
+# smart_doggy-ruby-version-
+I will add this field soon 
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
