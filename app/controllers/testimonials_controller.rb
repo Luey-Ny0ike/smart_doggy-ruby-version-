@@ -1,5 +1,6 @@
 class TestimonialsController < ApplicationController
   before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /testimonials
   # GET /testimonials.json
@@ -14,7 +15,7 @@ class TestimonialsController < ApplicationController
 
   # GET /testimonials/new
   def new
-    @testimonial = Testimonial.new
+    @testimonial = current_user.testimonials.build
   end
 
   # GET /testimonials/1/edit
@@ -24,7 +25,7 @@ class TestimonialsController < ApplicationController
   # POST /testimonials
   # POST /testimonials.json
   def create
-    @testimonial = Testimonial.new(testimonial_params)
+    @testimonial = current_user.testimonials.build(testimonial_params)
 
     respond_to do |format|
       if @testimonial.save
