@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /comments
   # GET /comments.json
@@ -19,6 +20,7 @@ class CommentsController < ApplicationController
   def new
     @testimonial = Testimonial.find(params[:testimonial_id])
     @comment = @testimonial.comments.new
+    @comment.user_id = current_user.id
   end
 
   # POST /comments
@@ -26,6 +28,7 @@ class CommentsController < ApplicationController
   def create
     @testimonial = Testimonial.find(params[:testimonial_id])
     @comment = @testimonial.comments.new(comment_params)
+    @comment.user_id = current_user.id
     if @comment.save
       redirect_to testimonial_comments_path
    else
