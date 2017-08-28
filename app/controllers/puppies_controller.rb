@@ -1,5 +1,7 @@
 class PuppiesController < ApplicationController
   before_action :set_puppy, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+  skip_authorize_resource :only => [:index, :show]
 
   # GET /puppies
   # GET /puppies.json
