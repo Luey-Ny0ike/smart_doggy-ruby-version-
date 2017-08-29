@@ -3,7 +3,7 @@ class CreateTestimonials < ActiveRecord::Migration[5.1]
     create_table :testimonials do |t|
       t.string :title
       t.column :message, :string
-
+      t.attachment :image
       t.timestamps
     end
   end
