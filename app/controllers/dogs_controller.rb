@@ -71,6 +71,7 @@ skip_authorize_resource :only => [:index, :show]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dog_params
-      params.require(:dog).permit(:name, :age, :breed, :gender, :color, :nickname, :title, :price, :recomendation, :description)
+      params.require(:dog).permit(:name, :age, :breed, :gender, :color,
+      :nickname, :title, :price, :recomendation, :description, :image1, :image2, :image3)
     end
 end
