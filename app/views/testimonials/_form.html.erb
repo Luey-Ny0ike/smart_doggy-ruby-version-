@@ -1,4 +1,4 @@
-<%= form_with(model: testimonial, local: true) do |form| %>
+<%= form_for  @testimonial, html: { multipart: true } do |form| %>
   <% if testimonial.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(testimonial.errors.count, "error") %> prohibited this testimonial from being saved:</h2>
@@ -19,6 +19,11 @@
   <div class="field">
     <%= form.label :message %>
     <%= form.text_field :message, id: :testimonial_message %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image, id: :image %>
   </div>
 
   <div class="actions">
