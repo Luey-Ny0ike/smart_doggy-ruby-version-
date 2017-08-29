@@ -34,6 +34,18 @@ ActiveRecord::Schema.define(version: 20170828121637) do
     t.integer "price"
     t.string "recomendation"
     t.string "description"
+    t.string "image1_file_name"
+    t.string "image1_content_type"
+    t.integer "image1_file_size"
+    t.datetime "image1_updated_at"
+    t.string "image2_file_name"
+    t.string "image2_content_type"
+    t.integer "image2_file_size"
+    t.datetime "image2_updated_at"
+    t.string "image3_file_name"
+    t.string "image3_content_type"
+    t.integer "image3_file_size"
+    t.datetime "image3_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
