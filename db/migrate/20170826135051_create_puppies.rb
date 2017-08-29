@@ -11,6 +11,9 @@ class CreatePuppies < ActiveRecord::Migration[5.1]
       t.integer :price
       t.string :recomendation
       t.string :description
+      t.attachment :image1
+      t.attachment :image2
+      t.attachment :image3
 
       t.timestamps
     end
