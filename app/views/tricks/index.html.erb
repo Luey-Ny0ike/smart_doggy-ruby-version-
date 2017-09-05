@@ -1,37 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tricks</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Step1</th>
-      <th>Step2</th>
-      <th>Step3</th>
-      <th>Step4</th>
-      <th>Extratips</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tricks.each do |trick| %>
       <tr>
-        <td><%= trick.title %></td>
-        <td><%= trick.step1 %></td>
-        <td><%= trick.step2 %></td>
-        <td><%= trick.step3 %></td>
-        <td><%= trick.step4 %></td>
-        <td><%= trick.extratips %></td>
-        <td><%= link_to 'Show', trick %></td>
-        <td><%= link_to 'Edit', edit_trick_path(trick) %></td>
-        <td><%= link_to 'Destroy', trick, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
 
 <br>
-
 <%= link_to 'New Trick', new_trick_path %>
