@@ -1,0 +1,93 @@
+<p id="notice"><%= notice %></h4>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="img-thumbnail">
+      <%= image_tag @puppy.image1.url(:large)%>
+    </div>
+  </div>
+  <div class="col-md-6">
+
+    <h4>
+      <strong>Name:</strong>
+      <%= @puppy.name %>
+    </h4>
+
+    <h4>
+      <strong>Age:</strong>
+      <%= @puppy.age %>
+    </h4>
+
+    <h4>
+      <h4>
+        <strong>Gender:</strong>
+        <%= @puppy.gender %>
+      </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h4>
+        <strong>Title:</strong>
+        <%= @puppy.title %>
+      </h4>
+      <h4>
+        <strong>Description:</strong>
+        <%= @puppy.description %>
+      </h4>
+
+    </div>
+    <div class="col-md-6">
+      <div class="img-thumbnail">
+
+        <%= image_tag @puppy.image2.url(:large)%>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="img-thumbnail">
+        <%= image_tag @puppy.image3.url(:large)%>
+      </div>
+    </div>
+    <div class="col-md-6">
+
+      <h4>
+        <strong>Breed:</strong>
+        <%= @puppy.breed %>
+      </h4>
+
+      <h4>
+        <strong>Color:</strong>
+        <%= @puppy.color %>
+      </h4>
+
+      <h4>
+        <strong>Nickname:</strong>
+        <%= @puppy.nickname %>
+      </h4>
+
+      <h4>
+        <strong>Price:</strong>
+        <%= @puppy.price %>
+      </h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <blockquote cite="http://">
+        <h4>
+          <strong>Recomendation:</strong>
+          <%= @puppy.recomendation %>
+        </h4>
+      </blockquote>
+    </div>
+  </div>
+
+  <% if can? :manage, User %>
+  <%= link_to 'Edit', edit_puppy_path(@puppy) %>
+  |
+  <%= link_to 'Back', puppies_path %>
+  <% end %>
