@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :message %>
-    <%= form.text_field :message, id: :testimonial_message %>
+    <%= form.text_area :message, id: :testimonial_message %>
   </div>
 
   <div class="field">
@@ -27,6 +27,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class => "btn"%>
   </div>
 <% end %>
