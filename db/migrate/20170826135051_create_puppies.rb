@@ -8,7 +8,7 @@ class CreatePuppies < ActiveRecord::Migration[5.1]
       t.string :color
       t.string :nickname
       t.string :title
-      t.integer :price
+      t.column :price, :varchar
       t.string :recomendation
       t.string :description
       t.attachment :image1
