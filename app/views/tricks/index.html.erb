@@ -1,9 +1,43 @@
 <p id="notice"><%= notice %></p>
+<h3>Learn the DO'S and DON'TS, Tricks and Tips to start you off with your new puppy! </h3>
 
+<h4>Learn how to teach your puppy some basic tricks</h4>
 
+<div class="well">
+  <div class="row">
+    <div class="col-md-6">
+      <% @tricks.each do |trick| %>
+      <h4 class="trick_title"><%= trick.title %></h4>
+        <div class="img-thumbnail">
+          <img src="<%= trick.img1 %>" alt="<%= trick.title %>">
+        </div>
+    </div>
+    <div class="col-md-6">
+      <table class="table table-condensed">
+    <thead>
       <tr>
+        <th>Follow this steps</th>
       </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="/assets/images/one.png" alt="1">&nbsp;<%= trick.step1 %></td>
+      </tr>
+      <tr>
+        <td><img src="/assets/images/two.png" alt="2">&nbsp;<%= trick.step2 %></td>
+      </tr>
+      <tr>
+        <td><br>
+        <%= link_to 'Show', trick, :class => "btn" %></td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
     <% end %>
+  </div>
+</div>
 
 <br>
+<% if can? :manage, User%>
 <%= link_to 'New Trick', new_trick_path %>
+<% end %>
