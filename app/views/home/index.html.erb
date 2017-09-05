@@ -38,5 +38,24 @@
       $('.slider').slider();
     });
 
+
+<div class="well">
+  <h1>Dogs</h1>
+
+  <div class="row">
+    <ul>
+      <% @dogs.each do |dog| %>
+      <div class="col-md-6">
+        <div class="img-thumbnail">
+          <%= image_tag dog.image1.url(:medium)%>
+        </div>
+        <li><%= dog.name %></li>
+        <li><%= dog.color %></li>
+        <li><%= dog.age %></li>
+        <li><%= link_to '<button class="btn btn-info" type="button">See More</button>'.html_safe,  dog %></li>
+      </div>
+      <% end %>
+    </ul>
+  </div>
 </div>
 </div>
