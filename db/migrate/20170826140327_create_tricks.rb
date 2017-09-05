@@ -9,7 +9,6 @@ class CreateTricks < ActiveRecord::Migration[5.1]
       t.string :extratips
       t.column :img1, :varchar
       t.column :img2, :varchar
-      t.column :img3, :varchar
       t.column :video, :varchar
 
       t.timestamps
