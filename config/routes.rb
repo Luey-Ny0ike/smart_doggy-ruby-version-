@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :tricks
-  resources :puppies
+  resources :puppies do
+    resources :bookings
+  end
   resources :dogs
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
