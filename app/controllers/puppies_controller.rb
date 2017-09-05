@@ -12,6 +12,8 @@ class PuppiesController < ApplicationController
   # GET /puppies/1
   # GET /puppies/1.json
   def show
+    @puppy = Puppy.find(params[:id])
+    @booking = @puppy.bookings.new
   end
 
   # GET /puppies/new
