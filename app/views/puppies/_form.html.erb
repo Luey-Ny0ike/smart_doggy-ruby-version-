@@ -1,5 +1,5 @@
 <%= form_for  @puppy, html: { multipart: true } do |form| %>
-  <% if puppy.errors.any? %>
+  <% if @puppy.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(puppy.errors.count, "error") %> prohibited this puppy from being saved:</h2>
 
