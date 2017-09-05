@@ -1,6 +1,51 @@
 <p id="notice"><%= notice %></p>
 
+<h4>You dont think a dog is that important? Maybe this might change your mind</h4>
+<h4>Read testimonies from our past customers</h4>
 
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large red" href="testimonials/new">
+    <i class="large material-icons">mode_edit</i>
+  </a>
+  <br><h6>add testimonial</h6>
+</div>
+<div class="container">
+  <% @testimonials.each do |testimonial| %>
+  <div class="well">
+    <h3><%= testimonial.title %></h3>
+    <hr>
+    <div class="img-thumbnail">
+      <%= image_tag testimonial.image.url(:large)%>
+    </div>
+    <p><%= testimonial.message %></p>
+    <% if testimonial.user == current_user %>
+      <%= link_to 'Edit', edit_testimonial_path(testimonial) %> |
+      <%= link_to 'Destroy', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+      <h4>Comments</h4>
+    <p><% testimonial.comments.each do |comment| %>
+        <p><em><%= comment.user.first_name %></em>: <%= comment.comment %></p>
+        <% end %>
+      </p>
+
+        <div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <%= link_to 'Show all comments', testimonial_comments_path(testimonial) %>
+      </div>
+      <div class="col-md-4">
+        <%= link_to 'New Comment', new_testimonial_comment_path(testimonial) %>
+      </div>
+      <div class="col-md-4">
+        <p>like</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <% end %>
+</div>
 
 
 <br>
