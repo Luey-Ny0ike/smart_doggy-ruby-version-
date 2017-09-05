@@ -71,6 +71,6 @@ skip_authorize_resource :only => [:index, :show]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trick_params
-      params.require(:trick).permit(:title, :step1, :step2, :step3, :step4, :extratips)
+      params.require(:trick).permit(:title, :step1, :step2, :step3, :step4, :extratips, :img1, :img2, :video)
     end
 end
