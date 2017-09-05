@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  skip_authorize_resource :only => [:index, :show]
 
   # GET /comments
   # GET /comments.json
