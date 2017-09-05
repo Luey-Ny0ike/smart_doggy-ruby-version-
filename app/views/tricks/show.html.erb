@@ -1,34 +1,70 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @trick.title %>
-</p>
+<h3>More information on how to <%= @trick.title %></h3>
+<div class="row">
+  <div class="col-md-6">
+      <div class="img-thumbnail">
+        <img src="<%= @trick.img1 %>" alt="<%= @trick.title %>">
+      </div>
+  </div>
+  <div class="col-md-6">
+    <table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Follow this steps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/assets/images/one.png" alt="1">&nbsp;<%= @trick.step1 %></td>
+    </tr>
+    <tr>
+      <td><img src="/assets/images/two.png" alt="2">&nbsp;<%= @trick.step2 %></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>
 
-<p>
-  <strong>Step1:</strong>
-  <%= @trick.step1 %>
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Follow this steps</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="/assets/images/three.png" alt="3">&nbsp;<%= @trick.step3 %></td>
+      </tr>
+      <tr>
+        <td><img src="/assets/images/four.png" alt="4">&nbsp;<%= @trick.step4 %></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
 
-<p>
-  <strong>Step2:</strong>
-  <%= @trick.step2 %>
-</p>
+  <div class="col-md-6">
+    <div class="img-thumbnail">
+      <img src="<%= @trick.img2 %>" alt="<%= @trick.title %>">
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Step3:</strong>
-  <%= @trick.step3 %>
-</p>
+<div class="col-md-12">
+  <h5>Extratips: <%= @trick.extratips %></h5>
+</div><br>
 
-<p>
-  <strong>Step4:</strong>
-  <%= @trick.step4 %>
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <iframe width="620" height="515" src= "<%= @trick.video %>">
+    </iframe>
 
-<p>
-  <strong>Extratips:</strong>
-  <%= @trick.extratips %>
-</p>
-
+  </div>
+</div>
+<% if can? :manage, User%>
+<%= link_to 'Destroy', @trick, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Edit', edit_trick_path(@trick) %> |
 <%= link_to 'Back', tricks_path %>
+<% end %>
