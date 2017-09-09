@@ -26,6 +26,11 @@
 <div class="sidebar-nav">
   <ul id="slide-out" class="side-nav">
     <li><div class="user-view">
+      <% if user_signed_in? %>
+        <p>Logged in as: <%= current_user.email %></p>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete, class:"btn")%>
+        <hr>
+      <% end %>
       <h4>Smart Doggy</h4>
     </div></li>
     <li><a href="/">Home</a></li>
