@@ -23,7 +23,7 @@
       <%= link_to 'Destroy', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
       <h4>Comments</h4>
-    <p><% testimonial.comments.each do |comment| %>
+    <p><% testimonial.comments.take(4).each do |comment| %>
         <p><em><%= comment.user.first_name %></em>: <%= comment.comment %></p>
         <% end %>
       </p>
