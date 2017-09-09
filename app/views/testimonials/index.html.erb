@@ -21,7 +21,7 @@
     <h3><%= testimonial.title %></h3>
     <hr>
     <div class="img-thumbnail">
-      <%= image_tag testimonial.image.url(:large)%>
+      <%= image_tag testimonial.image.url(:large), class: "img-responsive"%>
     </div>
     <p><%= testimonial.message %></p>
     <% if testimonial.user == current_user %>
