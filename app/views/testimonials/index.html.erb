@@ -12,6 +12,12 @@
 <div class="containe">
   <% @testimonials.each do |testimonial| %>
   <div class="well">
+    <div class="panel panel-default">
+      <div class="panel-body">
+      <p>By:<em>  <%= testimonial.user.first_name%>
+        <%= testimonial.user.last_name%></em></p>
+      </div>
+    </div>
     <h3><%= testimonial.title %></h3>
     <hr>
     <div class="img-thumbnail">
