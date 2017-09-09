@@ -32,7 +32,7 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-4">
-        <%= link_to 'Show all comments', testimonial_comments_path(testimonial) %>
+        <%= link_to 'Show all ' + testimonial.comments.count.to_s + ' comments', testimonial_comments_path(testimonial) %>
       </div>
       <div class="col-md-4">
         <%= link_to 'New Comment', new_testimonial_comment_path(testimonial) %>
