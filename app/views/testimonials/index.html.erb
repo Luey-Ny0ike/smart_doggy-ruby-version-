@@ -33,6 +33,7 @@
         <p><em><%= comment.user.first_name %></em>: <%= comment.comment %></p>
         <% end %>
       </p>
+      <strong><%= link_to 'Show all ' + testimonial.comments.count.to_s + ' comments', testimonial_comments_path(testimonial) %></strong>
 
         <div class="panel panel-default">
   <div class="panel-body">
