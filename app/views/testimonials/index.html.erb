@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h4>You dont think a dog is that important? Maybe this might change your mind</h4>
-<h4>Read testimonies from our past customers</h4>
+<div class="mimi">
+  <h4>You dont think a dog is that important? Maybe this might change your mind</h4>
+  <h4>Read testimonies from our past customers</h4>
+</div>
 
 <div class="fixed-action-btn">
   <a class="btn-floating btn-large red" href="testimonials/new">
@@ -9,7 +11,7 @@
   </a>
   <br><h6>add testimonial</h6>
 </div>
-<div class="containe">
+<div class="containe"> <!-- this is on purpose! it looks bad on a small screen size -->
   <% @testimonials.each do |testimonial| %>
   <div class="well">
     <div class="panel panel-default">
@@ -23,7 +25,7 @@
     <div class="img-thumbnail">
       <%= image_tag testimonial.image.url(:large), class: "img-responsive"%>
     </div>
-    <p><%= testimonial.message %></p>
+    <h5 class="mimi"><%= testimonial.message %></h5>
     <% if testimonial.user == current_user %>
       <%= link_to 'Edit', edit_testimonial_path(testimonial) %> |
       <%= link_to 'Destroy', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %>
