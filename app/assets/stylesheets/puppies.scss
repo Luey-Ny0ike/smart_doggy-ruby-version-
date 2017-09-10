@@ -4,3 +4,13 @@
 .book{
   text-align: center;
 }
+h4{
+  font-weight: bolder;
+  font-family: serif;
+  font-style: oblique;
+  em{
+    font-weight: normal;
+    font-family: cursive;
+    color: grey;
+  }
+}
