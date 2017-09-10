@@ -9,7 +9,11 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(_user)
+    if _user.superadmin_role
+      rails_admin_path
+    else
     testimonials_path
+    end
   end
 
   def after_sign_up_path_for(_user)
