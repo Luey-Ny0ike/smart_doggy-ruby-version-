@@ -88,7 +88,7 @@
         <% @puppies.each do |puppy| %>
         <div class="col-md-4">
           <div class="img-thumbnail">
-            <%= image_tag puppy.image1.url(:medium), class: "img-responsive", class: "materialboxed"%>
+            <%= image_tag puppy.image1.url(:medium), class: "img-responsive"%>
           </div>
           <h5><li><em>Name: </em><%= puppy.name %></li></h5>
             <h5><li><em>Colour: </em><%= puppy.color %></li></h5>
