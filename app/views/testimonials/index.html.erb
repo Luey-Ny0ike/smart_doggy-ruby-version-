@@ -32,11 +32,15 @@
       <%= link_to 'Destroy', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
       <h4>Comments</h4>
-    <p><% testimonial.comments.take(2).each do |comment| %>
-        <p><em><%= comment.user.first_name %></em>: <%= comment.comment %></p>
-        <% end %>
-      </p>
-      <strong><%= link_to 'Show all ' + testimonial.comments.count.to_s + ' comments', testimonial_comments_path(testimonial) %></strong>
+      <% if testimonial.comments.any? %>
+      <p><% testimonial.comments.take(2).each do |comment| %>
+          <p><em><%= comment.user.first_name %></em>: <%= comment.comment %></p>
+          <% end %>
+          <strong><%= link_to 'Show all ' + testimonial.comments.count.to_s + ' comments', testimonial_comments_path(testimonial) %></strong>
+        </p>
+      <% else%>
+      <p>No comments yet. Be the first to comment</p>
+      <% end %>
 
         <div class="panel panel-default">
   <div class="panel-body">
