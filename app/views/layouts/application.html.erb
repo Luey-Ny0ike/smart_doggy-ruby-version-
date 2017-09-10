@@ -30,6 +30,8 @@
         <p>Logged in as: <%= current_user.email %></p>
         <%= link_to('Logout', destroy_user_session_path, method: :delete, class:"btn")%>
         <hr>
+        <% else %>
+        <%= link_to('Login', new_user_session_path, class:"btn")%>
       <% end %>
       <h4>Smart Doggy</h4>
     </div></li>
