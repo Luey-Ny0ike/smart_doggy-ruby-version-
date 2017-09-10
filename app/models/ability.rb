@@ -11,5 +11,9 @@ class Ability
       can :access, :rails_admin
       can :dashboard
     end
+  if user && user.user_role?
+    can :manage, Testimonial
+    can :manage, Comment
+  end
   end
 end
