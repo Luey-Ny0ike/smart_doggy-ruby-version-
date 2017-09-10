@@ -50,9 +50,9 @@
         <div class="img-thumbnail">
           <%= image_tag dog.image1.url(:medium), class: "img-responsive"%>
         </div>
-        <li><%= dog.name %></li>
-        <li><%= dog.color %></li>
-        <li><%= dog.age %></li>
+        <h5><li><em>Name: </em><%= dog.name %></li></h5>
+        <h5><li><em>Colour: </em><%= dog.color %></li></h5>
+        <h5><li><em>Age: </em><%= dog.age %></li></h5>
         <li><%= link_to '<button class="btn btn-info" type="button">See More</button>'.html_safe,  dog %></li>
       </div>
       <% end %>
@@ -70,10 +70,10 @@
           <div class="img-thumbnail">
             <%= image_tag puppy.image1.url(:medium), class: "img-responsive", class: "materialboxed"%>
           </div>
-          <li><%= puppy.name %><br>
-            <%= puppy.color %><br>
-            <%= puppy.age %><br>
-            <%= link_to '<button class="btn btn-info" type="button">See More</button>'.html_safe, puppy %></li>
+          <h5><li><em>Name: </em><%= puppy.name %></li></h5>
+            <h5><li><em>Colour: </em><%= puppy.color %></li></h5>
+            <h5><li><em>Age: </em><%= puppy.age %></li></h5>
+            <li><%= link_to '<button class="btn btn-info" type="button">See More</button>'.html_safe, puppy %></li>
           </div>
           <% end %>
         </ul>
