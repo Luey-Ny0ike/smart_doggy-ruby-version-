@@ -2,7 +2,7 @@ class CreatePuppies < ActiveRecord::Migration[5.1]
   def change
     create_table :puppies do |t|
       t.string :name
-      t.integer :age
+      t.column :age, :varchar
       t.string :breed
       t.string :gender
       t.string :color
