@@ -11,6 +11,7 @@
   </a>
   <br><h6>add testimonial</h6>
 </div>
+<% if @testimonials.any? %>
 <div class="containe"> <!-- this is on purpose! it looks bad on a small screen size -->
   <% @testimonials.each do |testimonial| %>
   <div class="well">
@@ -49,7 +50,10 @@
   </div>
   <% end %>
 </div>
-
+<% else %>
+  <p>No testimonials yet</p>
+  <p>Be the first to write one!</p>
+<%end%>
 
 <br>
 
