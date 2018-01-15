@@ -42,13 +42,13 @@ ActiveRecord::Schema.define(version: 20170909222941) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
-    t.integer "age"
+    t.string "age"
     t.string "breed"
     t.string "gender"
     t.string "color"
     t.string "nickname"
     t.string "title"
-    t.integer "price"
+    t.string "price"
     t.string "recomendation"
     t.string "description"
     t.string "image1_file_name"
@@ -69,13 +69,13 @@ ActiveRecord::Schema.define(version: 20170909222941) do
 
   create_table "puppies", force: :cascade do |t|
     t.string "name"
-    t.integer "age"
+    t.string "age"
     t.string "breed"
     t.string "gender"
     t.string "color"
     t.string "nickname"
     t.string "title"
-    t.integer "price"
+    t.string "price"
     t.string "recomendation"
     t.string "description"
     t.string "image1_file_name"
@@ -115,7 +115,6 @@ ActiveRecord::Schema.define(version: 20170909222941) do
     t.string "extratips"
     t.string "img1"
     t.string "img2"
-    t.string "img3"
     t.string "video"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
