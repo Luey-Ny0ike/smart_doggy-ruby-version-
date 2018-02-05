@@ -4,3 +4,26 @@
 .mimi{
   font-family: 'Zilla Slab', serif;
 }
+.testimonials{
+#kato{
+  text-align: center;
+}
+.katz{
+  text-align: center;
+  margin: auto;
+}
+}
+@media (max-width: 500px) {
+  .skd{
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  .testimonials{
+    display: none;
+  }
+}
+@media (min-width: 500.2px) {
+  .testimonials2{
+    display: none;
+  }
+}
