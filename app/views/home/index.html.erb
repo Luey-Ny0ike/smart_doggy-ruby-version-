@@ -80,26 +80,25 @@
   </div>
 </div>
 
-<div class="nje well">
-  <h1>Available puppies</h1>
+  <div class="nje well">
+    <h1>Available puppies</h1>
 
-    <div class="row">
-      <ul>
-        <% @dogs.each do |dog| %>
-        <div class="col-md-6">
-          <div class="img-thumbnail">
-            <%= image_tag dog.image1.url(:medium), class: "img-responsive"%>
-          </div>
-          <h5><li><em>Name: </em><%= dog.name %></li></h5>
-          <h5><li><em>Colour: </em><%= dog.color %></li></h5>
-          <h5><li><em>Age: </em><%= dog.age %></li></h5>
-          <li><%= link_to '<button class="btn btn-info" type="button">See More</button>'.html_safe,  dog %></li>
+      <div class="row">
+        <ul>
+          <% @puppies.each do |puppy| %>
+          <div class="col-md-4">
+            <div class="img-thumbnail">
+              <%= image_tag puppy.image1.url(:medium), class: "img-responsive"%>
+            </div>
+            <h5><li><em>Name: </em><%= puppy.name %></li></h5>
+              <h5><li><em>Colour: </em><%= puppy.color %></li></h5>
+              <h5><li><em>Age: </em><%= puppy.age %></li></h5>
+              <li><%= link_to '<button class="btn btn-info" type="button">See More</button>'.html_safe, puppy %></li>
+            </div>
+            <% end %>
+          </ul>
         </div>
-        <% end %>
-      </ul>
-    </div>
   </div>
-
   <script>
   $(document).ready(function(){
   $('.materialboxed').materialbox();
