@@ -80,7 +80,7 @@
   </div>
 </div>
 
-<div class="well">
+<div class="nje well">
   <h1>Available puppies</h1>
 
     <div class="row">
@@ -100,25 +100,6 @@
     </div>
   </div>
 
-  <div class="well">
-    <h1>Available puppies</h1>
-
-      <div class="row">
-        <ul>
-          <% @puppies.each do |puppy| %>
-          <div class="col-md-4">
-            <div class="img-thumbnail">
-              <%= image_tag puppy.image1.url(:medium), class: "img-responsive"%>
-            </div>
-            <h5><li><em>Name: </em><%= puppy.name %></li></h5>
-              <h5><li><em>Colour: </em><%= puppy.color %></li></h5>
-              <h5><li><em>Age: </em><%= puppy.age %></li></h5>
-              <li><%= link_to '<button class="btn btn-info" type="button">See More</button>'.html_safe, puppy %></li>
-            </div>
-            <% end %>
-          </ul>
-        </div>
-  </div>
   <script>
   $(document).ready(function(){
   $('.materialboxed').materialbox();
